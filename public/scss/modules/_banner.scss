@@ -1,0 +1,81 @@
+.banner {
+	background: {
+		color: #f1f1f1;
+	}
+	&_container {
+		@extend .container;
+		display: flex;
+		flex: {
+			flow: column;
+		}
+	}
+	&_img {
+		img {
+			width: 100%;
+		}
+	}
+	&_text {
+		padding: $spacer;
+		align-self: flex-start !important;
+
+		.title {
+			color: #de2c26;
+    		font: {
+    			size: 40px;
+    			weight: 300;
+    		}
+    		margin-bottom: 20px;
+		}
+		.larger {
+			font: {
+				size: 18px;
+			}
+		}
+		a {
+			display: block;
+		}
+	}
+	@include media-breakpoint-down(sm) {
+		&_container {
+			max-width: 100%;
+			margin: 0;
+			padding: 0px;
+		}
+		.go-back {
+			display: none;
+		}
+	}
+	@include media-breakpoint-up(md) {
+		&_container {
+			position: relative;
+			padding: ($spacer * 3) $spacer;
+			flex: {
+				flow: row-reverse;
+			}
+			align: {
+				items: center;
+			}
+			.go-back {
+				position: absolute;
+				top: 15px;
+				left: 15px;
+			}
+		}
+		&_img,
+		&_text {
+			flex-basis: 50%;
+		}
+		&_img {
+			padding: {
+				left: $spacer / 2;
+			}
+			img {
+			    border: 15px solid #fff;
+    			box-shadow: 3px 3px 15px #a8a9aa;
+			}
+		}
+		&_text {
+			padding: 0px ($spacer / 2) 0px 0px;
+		}
+	}
+}

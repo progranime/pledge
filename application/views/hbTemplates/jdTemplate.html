@@ -1,0 +1,113 @@
+<div class="jd-template-wrapper">
+
+	<script id="jd-template" type="text/x-handlebars-template">
+		
+		<div class="hb-wrapper">
+			
+			<section class="bg--gray py-4">
+				<div class="container dynamic-container">
+				<h2 class="heading pb-3">Your Promise</h2>
+					
+					<div class="statements-wrap">
+						{{#each promises_statement.items}}
+						<div class="input-group mb-4 dynamic-field {{#if @first}} {{else}} removeable {{/if}}">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fa fa-circle"></i></span>
+							</div>
+							<div class="input-group-fields">
+								<input type="text" class="form-control" name="promises[]" value="{{this.item}}" required>
+								{{#if this.status}}
+								<input type="checkbox" class="form-control statement-status" checked>
+								<input type="hidden" class="form-control status-hidden" name="promises_status[]" value="tobeedit">
+								{{else}}
+								<input type="checkbox" class="form-control statement-status">
+								<input type="hidden" class="form-control status-hidden" name="promises_status[]">
+								{{/if}}
+							</div>
+							<span class="btn-remove-field"><i></i></span>
+						</div>
+						{{/each}}
+
+					</div>
+						
+					<div class="text-right">
+						<span class="btn-add-field"><i></i></span>
+					</div>
+					
+				</div>
+
+			</section>
+
+			<section class="bg--white py-4">
+				<div class="container dynamic-container">
+				<h2 class="heading pb-3">Your Contribution</h2>
+					
+					<div class="statements-wrap">
+						{{#each deliveries_statement.items}}
+						<div class="input-group mb-4 dynamic-field {{#if @first}} {{else}} removeable {{/if}}">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fa fa-circle"></i></span>
+							</div>
+							<div class="input-group-fields">
+								<input type="text" class="form-control" name="deliveries[]" value="{{this.item}}" required>
+								{{#if this.status}}
+								<input type="checkbox" class="form-control statement-status" checked>
+								<input type="hidden" class="form-control status-hidden" name="deliveries_status[]" value="tobeedit">
+								{{else}}
+								<input type="checkbox" class="form-control statement-status">
+								<input type="hidden" class="form-control status-hidden" name="deliveries_status[]">
+								{{/if}}
+							</div>
+							<span class="btn-remove-field"><i></i></span>
+						</div>
+						{{/each}}
+
+					</div>
+						
+					<div class="text-right">
+						<span class="btn-add-field"><i></i></span>
+					</div>
+					
+				</div>
+
+			</section>
+
+			<section class="bg--gray py-4">
+				<div class="container dynamic-container">
+				<h2 class="heading pb-3">Your Reward</h2>
+					
+					<div class="statements-wrap">
+						{{#each rewards_statement.items}}
+						<div class="input-group mb-4 dynamic-field {{#if @first}} {{else}} removeable {{/if}}">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fa fa-circle"></i></span>
+							</div>
+							<div class="input-group-fields">
+								<input type="text" class="form-control" name="rewards[]" value="{{this.item}}" required>
+								{{#if this.status}}
+								<input type="checkbox" class="form-control statement-status" checked>
+								<input type="hidden" class="form-control status-hidden" name="rewards_status[]" value="tobeedit">
+								{{else}}
+								<input type="checkbox" class="form-control statement-status">
+								<input type="hidden" class="form-control status-hidden" name="rewards_status[]">
+								{{/if}}
+							</div>
+							<span class="btn-remove-field"><i></i></span>
+						</div>
+						{{/each}}
+
+					</div>
+						
+					<div class="text-right">
+						<span class="btn-add-field"><i></i></span>
+					</div>
+					
+				</div>
+
+			</section>
+
+		</div>
+
+	</script>
+
+</div>

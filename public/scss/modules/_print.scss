@@ -1,0 +1,95 @@
+header {
+	@extend .d-print-none;
+}
+
+@media print {
+	* {
+	    -webkit-print-color-adjust: exact;
+	}
+
+}
+
+
+#pdf-container.converting {
+	padding: 0;
+	// width: 8.27in;
+	width: 1540px;
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 26px;
+	.banner {
+		&_container {
+			display: flex;
+			flex: {
+				flow: row-reverse;
+			}
+			align: {
+				items: center;
+			}
+			width: 1540px;
+			max-width: 100%;
+			// padding: ($spacer * 3) ($spacer * 6);
+			padding: $global-spacing * 3;
+
+			.go-back {
+				display: none;
+			}
+		}
+		&_text,
+		&_img {
+			flex: {
+				basis: 50%;
+			}
+		}
+		&_img {
+			img {
+				border: 15px solid #fff;
+    			box-shadow: 3px 3px 15px #a8a9aa;
+			}
+		}
+	}
+	.jd-container {
+		width: 1540px;
+		max-width: 100%;
+		// padding: ($spacer * 3) ($spacer * 6);
+		padding: 0px 43px;
+	}
+	.jd_summary {
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			+ ul {
+				margin-top: $spacer;
+			}
+		}
+		li {
+			display: flex;
+		}
+		&-con {
+			display: flex;
+			flex: {
+				flow: row;
+			}
+		}
+		ul {
+			flex-basis: 50%;
+			+ ul {
+				margin-top: 0;
+			}
+		}
+		li {
+			display: flex;
+			p {
+				flex: {
+					basis: calc(50% - 15px);
+				}
+			}
+			span {
+				flex: {
+					basis: 30px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,160 @@
+.container {
+
+	@include media-breakpoint-up (xl) {
+		max-width: 1540px;
+	}
+
+}
+
+.division {
+
+	.division {
+
+		&__container {
+			text-align: center;
+			margin-top: 60px;
+			
+			@include media-breakpoint-up (sm) {
+				max-width: 830px;
+			}
+			
+			.division {
+
+				&__title {
+					margin: 40px 0px;
+				}	
+			
+				&__item {
+					transition: all .3s ease-in-out;
+					padding: ($global-spacing) ($global-spacing + 10);
+
+					a {
+						color: #000;
+						text-decoration: none;
+
+						img {
+							max-width: 100%;
+						    max-height: 140px;
+						    margin-bottom: 10px;
+						}
+
+						p {
+					    	text-transform: uppercase;
+					    }
+					}
+
+					&:nth-child(1)  img { margin-left: -3px; }
+				    &:nth-child(2)  img { 
+				    	margin-left: 20px;
+						@include media-breakpoint-up (sm) {
+							margin-left: 25px;
+						}
+				    }
+				    &:nth-child(3)  img { margin-left: -15px; }
+				    &:nth-child(4)  img { margin-left: 10px; }
+				    &:nth-child(5)  img { margin-left: 20px; }
+				    &:nth-child(6)  img { margin-left: 0px; }
+				    &:nth-child(7)  img { margin-left: 15px; }
+				    &:nth-child(8)  img { 
+						margin-left: 16px;
+						@include media-breakpoint-up (sm) {
+				    		margin-left: 18px; }
+						}
+				    &:nth-child(9)  img { margin-left: -10px; }
+				    &:nth-child(10) img { margin-left: 15px; }
+				    &:nth-child(11) img { margin-left: -12px; }
+				    &:nth-child(12) img { margin-left: 12px; }
+				    &:nth-child(13) img { margin-left: -22px; }
+				    &:nth-child(14) img { margin-left: -20px; }
+				    &:nth-child(15) img { margin-left: 3px; }
+					
+
+					&:hover {
+					    -webkit-transform: scale(1.05);
+					    transform: scale(1.05);
+					    color: #333;
+					}
+				}
+			}
+			
+
+		}
+
+	}
+
+}
+
+.error {
+
+	&__container {
+		// @include make-row();
+		max-width: 600px !important;
+		margin: 10px auto;
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    bottom: 0;
+	    transform: translate(-50%, -50%);
+		
+		.row {
+			padding: $global-spacing;
+			
+			.error {
+
+				&__avatar {
+					@include make-col(12);
+					text-align: center;
+
+					@include media-breakpoint-up (sm) {
+						@include make-col(6);
+					}
+
+					img {
+						max-height: 180px;
+
+						@include media-breakpoint-up (sm) {
+							max-height: 350px;
+						}
+					}
+				}
+
+				&__message {
+					@include make-col(12);
+					@extend .align-self-center;
+					text-align: center;
+
+					@include media-breakpoint-up (sm) {
+						@include make-col(6);
+					}
+					
+					.error__message {
+
+						&-title {
+							font-size: 45px;
+							margin: $global-spacing 0px;
+							color: red;
+
+							@include media-breakpoint-up (sm) {
+								font-size: 60px;
+							}
+						}
+
+						&-subtitle {
+							font-size: 20px;
+							margin: $global-spacing 0px;
+							@include media-breakpoint-up (sm) {
+								font-size: 30px;
+							}
+						}
+						
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}

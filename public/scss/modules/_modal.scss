@@ -1,0 +1,98 @@
+.jd {
+	&-info {
+		position: fixed;
+		height: 50px;
+		width: 50px;
+		bottom: 20px;
+		right: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		opacity: 0.5;
+		cursor: pointer;
+		z-index: 9;
+		font: {
+			size: 30px;
+			weight: bolder;
+		}
+		color: #bbb;
+		border: {
+			radius: 50em;
+			color: #ddd;
+			style: solid;
+			width: 5px;
+		}
+		background: {
+			color: #eeeeee;
+		}
+		span {
+			border-radius: 50em;
+			height: 5px;
+			width: 5px;
+			background-color: #bbb;
+			position: absolute;
+			left: calc(50% - 2.5px);
+			top: 8px;
+		}
+		&_modal {
+			font: {
+				size: 15px;
+			}
+			border-radius: 6px;
+			.modal {
+				&-title {
+					font: {
+						size: 1.2em;
+						weight: bold;
+					}
+					padding: 0;
+				}
+				&-body {
+					max-height: 80vh;
+    				overflow: auto;
+					
+					background: {
+						color: #fcfcff;
+					}
+					border-radius: 6px;
+				}
+			}
+			.btn {
+				margin: 0;
+				padding: 0;
+			}
+			p {
+				margin: 0;
+			}
+			.subtitle {
+				font: {
+					weight: bold;
+				}
+				~ .subtitle {
+					margin-top: $spacer;
+				}
+			}
+			.item {
+				display: block;
+				padding: 5px 0px;
+				column-count: 3;
+
+				div {
+					&:nth-child(2) {
+						text-align: center;
+					}
+					&:nth-child(3) {
+						text-align: right;
+					}
+				}
+
+				+ .item {
+					border-top: 1px dotted #ddd;
+				}
+			}
+			span {
+				float: right;
+			}
+		}
+	}
+}
